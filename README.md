@@ -73,7 +73,7 @@ This project explores these core ideas in a simplified, beginner-friendly setup 
 ### Final Answer:
 > Regular exercise helps reduce risk.
 
-![Rag Reply](image/rag_reply.png)
+![Rag Reply](images/rag_reply.png)
 
 ---
 
@@ -88,7 +88,7 @@ This project goes beyond basic implementation by exploring how retrieval behaves
 
 **Insight:** Retrieval quality depends heavily on how queries are formulated.
 
-![Good Bad Query](image/good_bad_query.png)
+![Good Bad Query](images/good_bad_query.png)
 
 ---
 
@@ -99,9 +99,9 @@ This project goes beyond basic implementation by exploring how retrieval behaves
 
 **Insight:** Ranking directly affects the quality of generated answers.
 
-![Retrieval Relevant Document](image/retrieval_relevant_document.png)
+![Retrieval Relevant Document](images/retrieval_relevant_document.png)
 ------
-![Retrieval Score](image/retrieval_score.png)
+![Retrieval Score](images/retrieval_score.png)
 
 ---
 
@@ -112,7 +112,7 @@ This project goes beyond basic implementation by exploring how retrieval behaves
 
 **Insight:** Selecting the right k is critical for balancing precision and completeness.
 
-![Top K Retrieval](image/top_k_retrieval.png)
+![Top K Retrieval](images/top_k_retrieval.png)
 
 ---
 

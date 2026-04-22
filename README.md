@@ -2,8 +2,12 @@
 
 ![Python](https://img.shields.io/badge/Python-3.10-blue)
 ![RAG](https://img.shields.io/badge/Technique-RAG-green)
-![FAISS](https://img.shields.io/badge/VectorDB-FAISS-orange)
+![FAISS](https://img.shields.io/badge/VectorDB-FAISS-purple)
 ![Gemini](https://img.shields.io/badge/LLM-Gemini-yellow)
+![NLP](https://img.shields.io/badge/NLP-LLM-orange)
+![Framework](https://img.shields.io/badge/HuggingFace-Transformers-red)
+![Project](https://img.shields.io/badge/Status-Completed-brightgreen)
+![License](https://img.shields.io/badge/License-MIT-yellow)
 
 ---
 
@@ -69,6 +73,8 @@ This project explores these core ideas in a simplified, beginner-friendly setup 
 ### Final Answer:
 > Regular exercise helps reduce risk.
 
+![Rag Reply](rag_reply.png)
+
 ---
 
 ## 🔬 Experiments & Analysis
@@ -82,6 +88,8 @@ This project goes beyond basic implementation by exploring how retrieval behaves
 
 **Insight:** Retrieval quality depends heavily on how queries are formulated.
 
+![Good Bad Query](good_bad_query.png)
+
 ---
 
 ### 📊 2. Ranking Behavior
@@ -91,6 +99,10 @@ This project goes beyond basic implementation by exploring how retrieval behaves
 
 **Insight:** Ranking directly affects the quality of generated answers.
 
+![Retrieval Relevant Document](retrieval_relevant_document.png)
+------
+![Retrieval Score](retrieval_score.png)
+
 ---
 
 ### ⚙️ 3. Top-K Tradeoff
@@ -99,6 +111,8 @@ This project goes beyond basic implementation by exploring how retrieval behaves
 - Larger k → more context but potential noise  
 
 **Insight:** Selecting the right k is critical for balancing precision and completeness.
+
+![Top K Retrieval](top_k_retrieval.png)
 
 ---
 

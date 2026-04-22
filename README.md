@@ -75,5 +75,46 @@ Traditional LLMs often hallucinate or provide unverified answers. This project d
 
 ## ⚙️ Installation
 
-```bash
 pip install -r requirements.txt
+
+---
+
+▶️ How to Run
+
+Open the notebook:
+
+rag_health_assistant.ipynb
+
+Run all cells step-by-step.
+
+---
+
+📈 Results & Insights
+- Relevant documents are successfully retrieved using semantic similarity
+- Responses are grounded in retrieved context
+- Demonstrates core idea behind modern AI search systems
+
+---
+
+⚠️ Limitations
+- Small dataset
+- Basic retrieval (no re-ranking)
+- No UI
+
+---
+
+🚀 Future Improvements
+- Larger dataset (real medical sources)
+- Add re-ranking models
+- Build frontend (Streamlit)
+- Deploy as web app
+
+---
+
+✅ Conclusion
+
+This project demonstrates a beginner-friendly implementation of a RAG pipeline, highlighting how retrieval improves reliability and accuracy in LLM-based systems.
+
+👤 Author
+
+Muhammad Ali Waris Khan

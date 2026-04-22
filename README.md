@@ -1,4 +1,4 @@
-# 🧠 AI-Powered Health Assistant using Retrieval-Augmented Generation (RAG)
+# AI-Powered Health Assistant using Retrieval-Augmented Generation (RAG)
 
 ![Python](https://img.shields.io/badge/Python-3.10-blue)
 ![RAG](https://img.shields.io/badge/Technique-RAG-green)
@@ -27,7 +27,7 @@ This project explores these core ideas in a simplified, beginner-friendly setup 
 
 ---
 
-## 🧠 System Architecture
+## System Architecture
 
 1. User inputs a query  
 2. Query is converted into embeddings  
@@ -102,7 +102,7 @@ This project goes beyond basic implementation by exploring how retrieval behaves
 
 ---
 
-## 🧠 Key Learnings
+## Key Learnings
 
 Through this project, I explored:
 
@@ -127,7 +127,7 @@ These concepts are fundamental to modern AI systems such as search engines and i
 
 ---
 
-## 🧪 Tech Stack
+## Tech Stack
 
 - Python  
 - LangChain  

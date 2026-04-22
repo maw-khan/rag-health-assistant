@@ -1,62 +1,59 @@
 # 🧠 AI-Powered Health Assistant using Retrieval-Augmented Generation (RAG)
 
 ![Python](https://img.shields.io/badge/Python-3.10-blue)
-![LangChain](https://img.shields.io/badge/LangChain-RAG-green)
+![RAG](https://img.shields.io/badge/Technique-RAG-green)
 ![FAISS](https://img.shields.io/badge/VectorDB-FAISS-orange)
+![Gemini](https://img.shields.io/badge/LLM-Gemini-yellow)
 
 ---
 
 ## 📌 Overview
 
-This project implements a **Retrieval-Augmented Generation (RAG) system** that answers health-related questions by combining:
+This project implements a **Retrieval-Augmented Generation (RAG)** system that answers health-related queries by combining **semantic retrieval** with **LLM-based generation**.
 
-- 🔍 Semantic search (FAISS vector database)  
-- 🔢 Text embeddings (Sentence Transformers)  
-- 🤖 Large Language Model (Google Gemini)  
-
-Instead of relying only on a language model, the system retrieves relevant knowledge first and then generates grounded responses using that context.
+Instead of relying solely on a language model, the system first retrieves relevant documents and then generates responses grounded in that context — improving reliability and reducing hallucination.
 
 ---
 
-## 🎯 Problem Statement
+## 🎯 Motivation
 
-Large Language Models often:
-- Generate hallucinated or unverified answers  
-- Lack grounding in real factual data  
-- Struggle with domain-specific accuracy without context  
+Modern AI systems (search engines, assistants, recommendation systems) rely heavily on:
 
-This project solves these issues using a **retrieval + generation pipeline (RAG)** to improve factual reliability.
+- 🔍 Retrieval  
+- 📊 Ranking  
+- 🤖 Context-aware generation  
+
+This project explores these core ideas in a simplified, beginner-friendly setup while focusing on **understanding how retrieval affects final outputs**.
 
 ---
 
-## 🧠 RAG Architecture
+## 🧠 System Architecture
 
 1. User inputs a query  
 2. Query is converted into embeddings  
-3. FAISS performs similarity search over stored documents  
+3. FAISS performs similarity search  
 4. Top-k relevant documents are retrieved  
-5. Retrieved context + query are sent to LLM  
-6. Google Gemini generates final grounded response  
+5. Context is combined with query  
+6. Gemini generates the final grounded answer  
 
 ---
 
-## ⚙️ System Design
+## ⚙️ System Components
 
 ### 🔹 Embedding Layer
 - Model: `sentence-transformers/all-MiniLM-L6-v2`  
-- Converts text into dense vector representations  
+- Converts text into dense vector representations for semantic similarity  
 
 ### 🔹 Vector Database
-- FAISS is used for efficient similarity search  
-- Stores document embeddings for fast retrieval  
+- FAISS enables efficient similarity search over embeddings  
 
 ### 🔹 Retrieval Mechanism
-- Cosine similarity-based search  
-- Returns most relevant documents for the query  
+- Uses similarity-based ranking  
+- Returns top-k most relevant documents  
 
 ### 🔹 Generation Layer
-- Google Gemini API generates final answer  
-- Uses retrieved context in prompt  
+- Google Gemini generates answers using retrieved context  
+- Prompt ensures responses are grounded in retrieved knowledge  
 
 ---
 
@@ -65,12 +62,57 @@ This project solves these issues using a **retrieval + generation pipeline (RAG)
 ### Query:
 > How can I reduce risk of heart disease?
 
-### Retrieved Context:
+### Retrieved Documents:
 - Heart disease is a leading cause of death worldwide. Regular exercise helps reduce risk.  
-- High blood pressure can lead to serious complications if untreated.
+- High blood pressure can lead to serious complications if untreated.  
 
 ### Final Answer:
-> Regular exercise helps reduce the risk of heart disease.
+> Regular exercise helps reduce risk.
+
+---
+
+## 🔬 Experiments & Analysis
+
+This project goes beyond basic implementation by exploring how retrieval behaves:
+
+### 🔍 1. Query Quality Impact
+
+- Specific queries → highly relevant results  
+- Vague queries → less precise retrieval  
+
+**Insight:** Retrieval quality depends heavily on how queries are formulated.
+
+---
+
+### 📊 2. Ranking Behavior
+
+- Documents are ranked based on similarity scores  
+- Top-ranked document is most relevant  
+
+**Insight:** Ranking directly affects the quality of generated answers.
+
+---
+
+### ⚙️ 3. Top-K Tradeoff
+
+- Smaller k → more precise results  
+- Larger k → more context but potential noise  
+
+**Insight:** Selecting the right k is critical for balancing precision and completeness.
+
+---
+
+## 🧠 Key Learnings
+
+Through this project, I explored:
+
+- How semantic search retrieves relevant information  
+- The importance of ranking in search systems  
+- How query formulation impacts retrieval quality  
+- Trade-offs in selecting top-k documents  
+- How RAG reduces hallucination in LLM outputs  
+
+These concepts are fundamental to modern AI systems such as search engines and intelligent assistants.
 
 ---
 
@@ -78,9 +120,10 @@ This project solves these issues using a **retrieval + generation pipeline (RAG)
 
 - Semantic document retrieval using FAISS  
 - Dense embeddings using HuggingFace models  
-- Context-aware responses using Google Gemini  
-- Reduced hallucination through retrieval grounding  
-- Modular RAG pipeline design  
+- Context-aware response generation using Gemini  
+- Retrieval analysis with similarity scores  
+- Query comparison experiments  
+- Top-k retrieval experimentation  
 
 ---
 
@@ -94,14 +137,9 @@ This project solves these issues using a **retrieval + generation pipeline (RAG)
 
 ---
 
-## 📈 Results & Insights
+## ⚙️ Installation
 
-FAISS effectively retrieves semantically relevant documents
-Embedding-based search outperforms keyword matching
-LLM responses are more accurate and grounded
-Demonstrates real-world RAG architecture used in modern AI systems
-
----
+pip install -r requirements.txt---
 
 ## ⚠️ Limitations
 
@@ -124,9 +162,9 @@ Add user feedback loop for retrieval optimization
 
 ## 📌 Conclusion
 
-This project demonstrates a basic but complete RAG pipeline, showing how retrieval improves reliability and factual grounding in LLM-based systems.
+This project demonstrates a simple but effective RAG pipeline while emphasizing retrieval behavior, ranking, and system design considerations.
 
-It serves as a foundation for building production-level AI search and assistant systems.
+It highlights how modern AI systems depend not only on models, but on how information is retrieved and structured before generation.
 
 ## 👤 Author
 
